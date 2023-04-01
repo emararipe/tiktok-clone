@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./Video.css";
+import VideoFooter from "./components/footer/VideoFooter";
 
 function Video() {
   const videoRef = useRef(null);
@@ -25,6 +26,8 @@ function Video() {
         loop
         src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
       ></video>
+      {/* Side Bar*/}
+      <VideoFooter />
     </div>
   );
 }
