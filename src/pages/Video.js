@@ -1,18 +1,19 @@
-import React, { useRef, useState } from "react";
-import "./Video.css";
-import VideoFooter from "./components/footer/VideoFooter";
+import React, { useRef, useState } from "react"
+import "./Video.css"
+import VideoFooter from "./components/footer/VideoFooter"
+import VideoSidebar from "./components/sidebar/VideoSidebar"
 
-function Video() {
-  const videoRef = useRef(null);
-  const [play, setPlay] = useState(false);
+function Video({likes, messages, shares, name, description, music, url}) {
+  const videoRef = useRef(null)
+  const [play, setPlay] = useState(false)
 
   function handdleStart() {
     if (!play) {
-      videoRef.current.play();
-      setPlay(true);
+      videoRef.current.play()
+      setPlay(true)
     } else {
-      videoRef.current.pause();
-      setPlay(false);
+      videoRef.current.pause()
+      setPlay(false)
     }
   }
 
@@ -24,12 +25,20 @@ function Video() {
         ref={videoRef}
         onClick={handdleStart}
         loop
-        src="https://assets.mixkit.co/videos/preview/mixkit-waves-in-the-water-1164-large.mp4"
+        src={url}
       ></video>
-      {/* Side Bar*/}
-      <VideoFooter />
+      <VideoFooter
+        name={name}
+        description={description}
+        music={music}
+      />
+      <VideoSidebar
+        likes = {likes}
+        messages = {messages}
+        shares = {shares}
+      />
     </div>
-  );
+  )
 }
 
-export default Video;
+export default Video
