@@ -8,54 +8,61 @@
 }
 
 .videoFooter__text h3 {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .videoFooter__text p {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+  width: 80%;
 }
 
-
 .videoFooter__music {
-    display: flex;
+  display: flex;
 }
 
 .videoMusicFooter__text {
-    width: 80%;
-    overflow: hidden;
+  width: 80%;
+  overflow: hidden;
 }
 
 .videoMusicFooter__text p {
-    animation: moveTheText 5s infinite linear;
+  animation: moveTheText 5s infinite linear;
 }
 
 .videoFooter__record {
-    animation: spinTheRecord 3s infinite linear;
-    position: absolute;
-    bottom: 5px;
-    right: 0px;
-    height: 50px;
-    filter: invert();
+  animation: spinTheRecord 3s infinite linear;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  height: 50px;
+  filter: invert();
 }
 
-
 @keyframes spinTheRecord {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes moveTheText {
-    0% {
-        transform: translateX(100%);
-    }
+  0% {
+    transform: translateX(100%);
+  }
 
-    100% {
-        transform: translateX(-100%);
-    }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
+@media only screen and (max-width: 440px) {
+  .videoFooter {
+    bottom: 22%;
+  }
+  .videoMusicFooter__text {
+    width: 78%;
+  }
+}
