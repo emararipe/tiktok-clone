@@ -54,7 +54,7 @@
   }
 
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 
