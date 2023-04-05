@@ -50,7 +50,7 @@
 
 @keyframes moveTheText {
   0% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 
   100% {
@@ -63,6 +63,6 @@
     bottom: 22%;
   }
   .videoMusicFooter__text {
-    width: 78%;
+    width: 100%;
   }
 }
