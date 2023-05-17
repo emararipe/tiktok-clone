@@ -5,7 +5,8 @@ import VideoSidebar from "./components/sidebar/VideoSidebar"
 
 function Video({likes, messages, shares, name, description, music, url}) {
   const videoRef = useRef(null)
-  const [play, setPlay] = useState(false)
+  const [play, setPlay] = useState(true)
+
 
   function handdleStart() {
     if (!play) {
@@ -23,8 +24,10 @@ function Video({likes, messages, shares, name, description, music, url}) {
         className="video__player"
         //controls
         ref={videoRef}
+        autoPlay
         onClick={handdleStart}
         loop
+        muted
         src={url}
       ></video>
       <VideoFooter
